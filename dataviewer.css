@@ -1,0 +1,460 @@
+.dataviewer {
+	font:11px Tahoma;
+	width:100%;
+	position:relative;
+}
+
+.dataviewer .status {
+	background:#f4f4f4;
+	float:right;
+	padding:5px;
+}
+
+
+
+.dataviewer .loader {
+	display:none;
+	z-index:1000;
+	position:absolute;
+	width:100%;
+	height:100%;
+	background: white url('images/loader2.gif') center no-repeat;
+}
+.dataviewer .table-container {
+	position:relative;
+	height:400px;
+	overflow:auto;
+	border:1px dotted #555555;
+	width:100%;
+	background:white;
+}
+.dataviewer table {
+	position:relative;
+	border-spacing:0px;
+	width:100%;
+	border:1px solid #aaaaaa;
+	background:white url('images/signature.gif') right bottom no-repeat;
+}
+
+
+.dataviewer .align-right {
+	text-align:right
+}
+
+.dataviewer  th{
+	position:relative;
+	font:11px Tahoma;
+	/*text-transform:uppercase;*/
+	text-align:left;
+	background-color:#eeeeee;
+	padding:3px;
+	outline:1px solid #aaaaaa;
+	border-right:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+	
+	cursor:pointer;
+	background-image:url('images/header-bg.png');
+	background-position:top;
+	background-repeat:repeat-x;
+}
+	.dataviewer th.hover{
+		background-color:#f4f4f4;
+	}
+
+
+.dataviewer  tr.selected td {
+	background:#114488;
+	color:white;
+}
+
+.dataviewer tr.highlighted td {
+	font-weight:bold;
+	color:#114488;
+	background-color:#EBF5FF;
+	
+}
+
+.dataviewer  tr.hover td {
+	background:#eeeeff;
+}
+
+.dataviewer  tr.selected.hover td {
+	background:#114488;
+	color:white;
+}
+.dataviewer td{
+	cursor:default;
+	padding:2px;
+	font:11px Tahoma;
+	border-bottom:1px solid #dddddd;
+}
+
+
+.dataviewer tr.even{
+	background:white;
+}
+
+.dataviewer tr.odd{
+	background:#fafafa;
+}
+
+
+.dataviewer  *.align-right {
+	text-align:right;
+}
+
+.dataviewer .navigation{
+	border:1px solid #aaaaaa;
+	float:left;
+	width:inherit;
+	padding-top:5px;
+	padding-bottom:5px;
+	background:#f4f4f4;
+}
+
+.dataviewer .data-limit {
+	margin-left:5px;
+	float:left;
+}
+
+.dataviewer .action {
+	float:left;
+	padding:2px;
+}
+
+.dataviewer .navlink {
+	float:left;
+	width:16px;
+	height:16px;
+	text-decoration:none;
+	border:1px solid #aaaaaa;
+	margin:2px;
+	background-position:top;
+}
+
+
+.dataviewer .navlink.first {
+	background-image:url('images/first.gif');
+}
+
+.dataviewer .navlink.prev {
+	background-image:url('images/prev.gif');
+}
+
+.dataviewer .navlink.next {
+	background-image:url('images/next.gif');
+}
+
+.dataviewer .navlink.last {
+	background-image:url('images/last.gif');
+}
+
+.dataviewer .navlink.disabled {
+	background-position:bottom;
+}
+
+
+/* testig stuff, needs namespacing man \/ */
+.operation {
+	display:inline;
+	margin-right:5px;
+}
+	.operation img{
+		border:none;
+	}
+
+.hover {
+background:#eeeeee;
+}
+
+.dataviewer .selected {
+	color:white;
+	background:#114488;
+}
+
+
+/* scrollbar */
+
+.dataviewer #scrollbar {
+	width:100%;
+	float:left;
+}
+
+.dataviewer  .bar {
+	display:block;
+	height:12px;
+	background:url('images/scrollbar-bg.gif') left top repeat-x;
+	border:1px solid #aaaaaa;
+	border-top:none;
+	position:relative;
+}
+
+.dataviewer .scroller {
+	position:absolute;
+	width:100%;
+	height:12px;
+	background:#fafafa url('images/scroller.gif') center no-repeat;
+	outline:1px solid #888888;
+	cursor:move;
+}
+
+.dataviewer .scrollstatus {
+	font-size:10px;
+	background:white;
+	text-align:center;
+	color:black;
+	position:absolute;
+	width:100px;
+}
+
+.dataviewer .data-container {
+	position:relative;
+}
+.dataviewer .indicator {
+background: white ;
+border: 1px solid black;
+position: absolute ;
+left:0px;
+top:0px;
+padding: 0px ;
+z-index:1000;
+display:none;
+width:16px;
+height:16px;
+background:url('images/loading_small.gif') center no-repeat;
+}
+
+
+.dataviewer .field-action {
+	text-decoration:underline;
+}
+
+.dataviewer td.dragger {
+	cursor:move;	
+	width:7px;
+	background:url('images/dragger-bg.gif?') center no-repeat;
+	background-color:#f4f4f4;
+	border-right:1px solid #aaaaaa;
+}
+
+.dataviewer .selected td.dragger {
+	background:url('images/dragger-bg.gif?') center no-repeat;
+	background-color:#f4f4f4;
+}
+
+.dataviewer .selected.hover td.dragger {
+	background:url('images/dragger-bg.gif?') center no-repeat;
+	background-color:#f4f4f4;
+}
+
+.dataviewer .hover td.dragger {
+	background:url('images/dragger-bg.gif?') center no-repeat;
+	background-color:#e7e7e7;
+}
+
+
+.dataviewer td.checkbox {
+	width:14px;
+}
+
+.dataviewer td.operations {
+	text-align:center;
+	padding:2px;
+}
+
+
+
+.dataviewer  tr.selected td a {
+	color:white;
+}
+
+
+.dataviewer th.asc {
+	background-image:url('images/ascdesc.gif') ;
+	background-repeat:no-repeat;
+	background-position:top center;
+}
+
+.dataviewer th.desc {
+	background-image:url('images/ascdesc.gif') ;
+	background-repeat:no-repeat;
+	background-position:bottom center;
+}
+
+
+.dataviewer .status_pane {
+padding:3px;
+font:11px Tahoma;
+margin-right:10px;
+display:inline-block;
+}
+
+.dataviewer .status_pane.viewing-scope {
+	text-align:center;
+	margin-right:0px;
+}
+
+.dataviewer a.prev {
+	background:url('images/prev.gif') top center no-repeat;
+	display:inline-block;
+	width:16px;
+	height:16px;
+}
+
+.dataviewer  a.next {
+	background:url('images/next.gif') top center no-repeat;
+	display:inline-block;
+	width:16px;
+	height:16px;
+}
+
+.dataviewer a.prev:hover {
+	background-position: bottom center;
+	text-decoration:none;
+}
+
+.dataviewer a.next:hover {
+	background-position: bottom center;
+	text-decoration:none;
+}
+
+
+.dataviewer .status_pane input{
+	border:1px solid #aaaaaa;
+	margin:1px;
+	font:11px Tahoma;
+	padding:1px;
+	background:white;
+}
+
+.dataviewer .status_pane label{
+padding:3px;
+}
+.dataviewer .views  {
+	width:100%;
+	margin-bottom:4px;
+	margin-top:4px;
+}
+
+.dataviewer .views a {
+font:11px Arial;
+color:#333333;
+font-weight:bold;
+text-align:center;
+padding:5px;
+display:inline-block;
+width:77px;
+height:14px;
+background:url('images/view-button.gif?');
+background-position:top left;
+margin-right:3px;
+text-decoration:none;
+}
+
+
+.dataviewer .views a.current {
+background-position:bottom left;
+}
+
+
+.dataviewer .views a:active{
+background-position:center;
+}
+
+.dataviewer .views a:hover{
+background-position:center;
+}
+
+.dataviewer .views a.current:hover {
+background-position:bottom left;
+}
+
+.dataviewer td.nodata {
+	padding:50px;
+	text-align:center;
+}
+
+.dataviewer .refresh {
+	border:none;
+	position:absolute;
+	right:0px;
+	/*bottom:0px;*/
+	padding:2px;
+	width:16px;
+	height:16px;
+	display:block;
+	float:right;	
+	border:1px solid #aaaaaa;
+	border-top:none;
+	background:#eeeeee url('images/refresh.png') center no-repeat;
+}
+
+.dataviewer .refresh:hover {
+	background-color:#ffffff;
+}
+
+.dataviewer .baloon {
+left:0px;
+top:0px;
+z-index:1000;
+border:1px solid #333333;
+padding:5px;
+position:absolute;
+background:white;
+}
+
+.dataviewer .baloon {
+-moz-border-radius-topleft:4px;
+-moz-border-radius-topright:4px;
+-moz-border-radius-bottomright:4px;
+-moz-border-radius-bottomleft:4px;
+}
+
+.dataviewer .baloon a{
+	color:black;
+
+}
+
+.dataviewer .search-container {
+	width:160px;
+	position:absolute;
+	top:-25px;
+	right:0px;
+	border:1px solid #dddddd;
+	margin-bottom:2px;
+}
+
+.dataviewer .search-input {
+	border:none;
+	background:white;
+	padding:2px;
+	color:#aaaaaa;
+	width:135px;
+	float:left;
+}
+
+.dataviewer .search-input.focused {
+	color:black;
+}
+
+.dataviewer .search-go {
+	width:20px;
+	height:20px;
+	float:left;
+	background:url('images/button-search.gif') left top no-repeat;
+}
+
+.dataviewer td.label {
+	background:#f4f4f4;
+	cursor:default;
+	color:#444444;
+	
+	/*
+	border-right:1px solid #dddddd;
+	border-left:1px solid #dddddd;
+	*/
+}
+
+.dataviewer tr.odd td.label{
+	background:#eeeeee;
+}
