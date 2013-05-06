@@ -27,20 +27,22 @@ Debugging and CHANGE LOG
 	- allowed entering a larger number than total record number into "View limit" field // still needs fixing (limit not consistent when adding data)
 	- debugged inlineEditable span dimensions (annoying click only in text feature)
 
+ * 2.1 :: 17:04 22.2.2011.
+	- uniqueToggler :: added field constructor for radio button
+	- Added "additional" param for updateField function, determines update context (e.g. preoperations...)
+	- Modified $.fn.construct function :: added objectKeySuffix used for passing an INSTANCE ID for grouping objects in DATA GRID
+	  such as radiobuttons (since the name determines the group)
+	 
+ 
 
  * 2.0 :: 0:14 9.12.2010. :: 
 	- inlineEditable :: added TAB && SHIFT TAB functionality to switch between cell's. 
 	- added KEYEVENTS MAP BETA to track key states
 	- added inlineEditable checking of update, no ajax update is called if value doesn't change :: bandwith_saving++ :-)
 	   
-* 2.1 :: 17:04 22.2.2011.
-	- uniqueToggler :: added field constructor for radio button
-	- Added "additional" param for updateField function, determines update context (e.g. preoperations...)
-	- Modified $.fn.construct function :: added objectKeySuffix used for passing an INSTANCE ID for grouping objects in DATA GRID
-	  such as radiobuttons (since the name determines the group)
-	 * 1.8 :: BugFix with search implementation
- 
+
  * 1.9 :: 17:44 5.11.2010. 
 	- Baloon/FieldConstructor contentEditable fix 
 	- default display and hide events change to "mousenter" and "mouseleave". 
- 
+
+ * 1.8 :: BugFix with search implementation
